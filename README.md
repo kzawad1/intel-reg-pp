@@ -121,7 +121,12 @@ Need to determine how to get the values of the following registers:
 
 | MSR Register Name | MSR Register Address | Output |
 |-------------------|----------------------|---|
-| MSR_PPERF         | 0x64E                | rdmsr: CPU 0 cannot read MSR 0x0000064E |
-| z                 | z                    | z |
-| z                 | z                    | z |
+| MSR_PPERF | 0x64E | rdmsr: CPU 0 cannot read MSR 0x0000064E |
+| IA32_PM_ENABLE | 0x770 | rdmsr: CPU 0 cannot read MSR 0x00000770 |
+| IA32_HWP_CAPABILITIES | 0x771 | rdmsr: CPU 0 cannot read MSR 0x00000771 |
+| IA32_HWP_REQUEST_PKG | 0x772 | rdmsr: CPU 0 cannot read MSR 0x00000772 |
+| IA32_HWP_INTERRUPT | 0x773 | rdmsr: CPU 0 cannot read MSR 0x00000773 |
+| IA32_HWP_REQUEST | 0x774 | rdmsr: CPU 0 cannot read MSR 0x00000774 |
+| IA32_HWP_PECI_REQUEST_INFO | 0x775 | rdmsr: CPU 0 cannot read MSR 0x00000775 |
+| IA32_HWP_STATUS | 0x777 | rdmsr: CPU 0 cannot read MSR 0x00000777 |
 
