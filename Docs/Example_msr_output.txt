@@ -1,0 +1,1161 @@
+root@ubuntu-233:~# ./msr_output.sh 
+MSR Dump, Script Version 1.0
++----+------------------------------+---------+----------+----------+----------+----------+
+|  # | MSR Register                 | Address |   Core 0 |   Core 1 |   Core 2 |   Core 3 |
++----+------------------------------+---------+----------+----------+----------+----------+
+|  0 | IA32_PERF_CTL                |   0x199 |     1d00 |     1d00 |     1d00 |     1d00 |
+|  1 | IA32_CLOCK_MODULATION        |   0x19A |        0 |        0 |        0 |        0 |
+|  2 | IS32_THERM_INTERRUPT         |   0x19B |       13 |       13 |       13 |       13 |
+|  3 | IA32_HWP_THERM_STATUS        |   0x19C | 883a0800 | 88380800 | 883b0800 | 88390800 |
+|  4 | IA32_MISC_ENABLE             |   0x1A0 |   850089 |   850089 |   850089 |   850089 |
+|  5 | IA32_PACKAGE_THERM_MARGIN    |   0x1A1 |     3afc |     3af0 |     3ae4 |     3ad2 |
+|  6 | IA32_TEMPERATURE_TARGET      |   0x1A2 |   640000 |   640000 |   640000 |   640000 |
+|  7 | IA32_PKG_THERM_STATUS        |   0x1B1 | 88380800 | 88380800 | 88380800 | 88380800 |
+|  8 | MSR_PKG_ENERGY_STATUS        |   0x611 | 61b9b602 | 61b9b874 | 61b9bbbb | 61b9be6d |
+|  9 | MSR_PKG_STATUS               |   0x613 |       4e |       4e |       4e |       4e |
+| 10 | MSR_PPERF                    |   0x64E |      N/A |      N/A |      N/A |      N/A |
+| 11 | MSR_CORE_PERF_LIMIT_REASONS  |   0x690 | 1c200020 | 1c200000 | 1c201000 | 1c201000 |
+| 12 | IA32_PM_ENABLE               |   0x770 |      N/A |      N/A |      N/A |      N/A |
+| 13 | IA32_HWP_CAPABILITIES        |   0x771 |      N/A |      N/A |      N/A |      N/A |
+| 14 | IA32_HWP_REQUEST_PKG         |   0x772 |      N/A |      N/A |      N/A |      N/A |
+| 15 | IA32_HWP_INTERRUPT           |   0x773 |      N/A |      N/A |      N/A |      N/A |
+| 16 | IA32_HWP_REQUEST             |   0x774 |      N/A |      N/A |      N/A |      N/A |
+| 17 | IA32_HWP_PECI_REQUEST_INFO   |   0x775 |      N/A |      N/A |      N/A |      N/A |
+| 18 | IA32_HWP_STATUS              |   0x777 |      N/A |      N/A |      N/A |      N/A |
++----+------------------------------+---------+----------+----------+----------+----------+
+Generated table by executing commands:
+  [ 0] sudo rdmsr -p 0 0x199 -f 63:0 2>&1
+  [ 0] sudo rdmsr -p 1 0x199 -f 63:0 2>&1
+  [ 0] sudo rdmsr -p 2 0x199 -f 63:0 2>&1
+  [ 0] sudo rdmsr -p 3 0x199 -f 63:0 2>&1
+  [ 1] sudo rdmsr -p 0 0x19A -f 63:0 2>&1
+  [ 1] sudo rdmsr -p 1 0x19A -f 63:0 2>&1
+  [ 1] sudo rdmsr -p 2 0x19A -f 63:0 2>&1
+  [ 1] sudo rdmsr -p 3 0x19A -f 63:0 2>&1
+  [ 2] sudo rdmsr -p 0 0x19B -f 63:0 2>&1
+  [ 2] sudo rdmsr -p 1 0x19B -f 63:0 2>&1
+  [ 2] sudo rdmsr -p 2 0x19B -f 63:0 2>&1
+  [ 2] sudo rdmsr -p 3 0x19B -f 63:0 2>&1
+  [ 3] sudo rdmsr -p 0 0x19C -f 63:0 2>&1
+  [ 3] sudo rdmsr -p 1 0x19C -f 63:0 2>&1
+  [ 3] sudo rdmsr -p 2 0x19C -f 63:0 2>&1
+  [ 3] sudo rdmsr -p 3 0x19C -f 63:0 2>&1
+  [ 4] sudo rdmsr -p 0 0x1A0 -f 63:0 2>&1
+  [ 4] sudo rdmsr -p 1 0x1A0 -f 63:0 2>&1
+  [ 4] sudo rdmsr -p 2 0x1A0 -f 63:0 2>&1
+  [ 4] sudo rdmsr -p 3 0x1A0 -f 63:0 2>&1
+  [ 5] sudo rdmsr -p 0 0x1A1 -f 63:0 2>&1
+  [ 5] sudo rdmsr -p 1 0x1A1 -f 63:0 2>&1
+  [ 5] sudo rdmsr -p 2 0x1A1 -f 63:0 2>&1
+  [ 5] sudo rdmsr -p 3 0x1A1 -f 63:0 2>&1
+  [ 6] sudo rdmsr -p 0 0x1A2 -f 63:0 2>&1
+  [ 6] sudo rdmsr -p 1 0x1A2 -f 63:0 2>&1
+  [ 6] sudo rdmsr -p 2 0x1A2 -f 63:0 2>&1
+  [ 6] sudo rdmsr -p 3 0x1A2 -f 63:0 2>&1
+  [ 7] sudo rdmsr -p 0 0x1B1 -f 63:0 2>&1
+  [ 7] sudo rdmsr -p 1 0x1B1 -f 63:0 2>&1
+  [ 7] sudo rdmsr -p 2 0x1B1 -f 63:0 2>&1
+  [ 7] sudo rdmsr -p 3 0x1B1 -f 63:0 2>&1
+  [ 8] sudo rdmsr -p 0 0x611 -f 63:0 2>&1
+  [ 8] sudo rdmsr -p 1 0x611 -f 63:0 2>&1
+  [ 8] sudo rdmsr -p 2 0x611 -f 63:0 2>&1
+  [ 8] sudo rdmsr -p 3 0x611 -f 63:0 2>&1
+  [ 9] sudo rdmsr -p 0 0x613 -f 63:0 2>&1
+  [ 9] sudo rdmsr -p 1 0x613 -f 63:0 2>&1
+  [ 9] sudo rdmsr -p 2 0x613 -f 63:0 2>&1
+  [ 9] sudo rdmsr -p 3 0x613 -f 63:0 2>&1
+  [10] sudo rdmsr -p 0 0x64E -f 63:0 2>&1
+  [10] sudo rdmsr -p 1 0x64E -f 63:0 2>&1
+  [10] sudo rdmsr -p 2 0x64E -f 63:0 2>&1
+  [10] sudo rdmsr -p 3 0x64E -f 63:0 2>&1
+  [11] sudo rdmsr -p 0 0x690 -f 63:0 2>&1
+  [11] sudo rdmsr -p 1 0x690 -f 63:0 2>&1
+  [11] sudo rdmsr -p 2 0x690 -f 63:0 2>&1
+  [11] sudo rdmsr -p 3 0x690 -f 63:0 2>&1
+  [12] sudo rdmsr -p 0 0x770 -f 63:0 2>&1
+  [12] sudo rdmsr -p 1 0x770 -f 63:0 2>&1
+  [12] sudo rdmsr -p 2 0x770 -f 63:0 2>&1
+  [12] sudo rdmsr -p 3 0x770 -f 63:0 2>&1
+  [13] sudo rdmsr -p 0 0x771 -f 63:0 2>&1
+  [13] sudo rdmsr -p 1 0x771 -f 63:0 2>&1
+  [13] sudo rdmsr -p 2 0x771 -f 63:0 2>&1
+  [13] sudo rdmsr -p 3 0x771 -f 63:0 2>&1
+  [14] sudo rdmsr -p 0 0x772 -f 63:0 2>&1
+  [14] sudo rdmsr -p 1 0x772 -f 63:0 2>&1
+  [14] sudo rdmsr -p 2 0x772 -f 63:0 2>&1
+  [14] sudo rdmsr -p 3 0x772 -f 63:0 2>&1
+  [15] sudo rdmsr -p 0 0x773 -f 63:0 2>&1
+  [15] sudo rdmsr -p 1 0x773 -f 63:0 2>&1
+  [15] sudo rdmsr -p 2 0x773 -f 63:0 2>&1
+  [15] sudo rdmsr -p 3 0x773 -f 63:0 2>&1
+  [16] sudo rdmsr -p 0 0x774 -f 63:0 2>&1
+  [16] sudo rdmsr -p 1 0x774 -f 63:0 2>&1
+  [16] sudo rdmsr -p 2 0x774 -f 63:0 2>&1
+  [16] sudo rdmsr -p 3 0x774 -f 63:0 2>&1
+  [17] sudo rdmsr -p 0 0x775 -f 63:0 2>&1
+  [17] sudo rdmsr -p 1 0x775 -f 63:0 2>&1
+  [17] sudo rdmsr -p 2 0x775 -f 63:0 2>&1
+  [17] sudo rdmsr -p 3 0x775 -f 63:0 2>&1
+  [18] sudo rdmsr -p 0 0x777 -f 63:0 2>&1
+  [18] sudo rdmsr -p 1 0x777 -f 63:0 2>&1
+  [18] sudo rdmsr -p 2 0x777 -f 63:0 2>&1
+  [18] sudo rdmsr -p 3 0x777 -f 63:0 2>&1
+
+
+###########################################################################
+CORE: 0
+
+
+./intel-reg-pp.out -a 0x199 1d00
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[199H] IA32_PERF_CTL
+  Command to read: sudo rdmsr 0x199 -f 63:0
+Value of register is: 00001d00
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000001110100000000
+   └───────────────┬─────────────┘│└──────┬───────┘└──────┬───────┘
+              Reserved            │       │               │        
+IDA Engage (R/W) 1:disengage IDA ─┘       │               │        
+Reserved ─────────────────────────────────┘               │        
+Target Performance State Value ───────────────────────────┘  0x1d00 -> 7424  
+
+
+./intel-reg-pp.out -a 0x19A 0
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19AH] IA32_CLOCK_MODULATION
+  Command to read: sudo rdmsr 0x19A -f 63:0
+Value of register is: 00000000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000000000000000000
+   └─────────────────────────────┬───────────────────────────┘│└┬┘│
+                             Reserved                         │ │ │
+On-Demand Clock Modulation Enable ────────────────────────────┘ │ │
+On-Demand Clock Modulation Duty Cycle ──────────────────────────┘ │
+Extended On-Demand Clock Modulation Duty Cycle ───────────────────┘
+
+
+./intel-reg-pp.out -a 0x19B 13
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19BH] IA32_THERM_INTERRUPT
+  Command to read: sudo rdmsr 0x19b -f 63:0
+Value of register is: 00000013
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b10000000000000000000000000000000000000000000000000000000000010011
+   └───────────────┬──────────────────────┘│└──┬──┘│└──┬──┘└┬┘│││││
+              Reserved                     │   │   │   │    │ │││││
+Threshold #2 INT Enable ───────────────────┘   │   │   │    │ │││││
+Threshold #2 Value ────────────────────────────┘   │   │    │ │││││
+Threshold #1 INT Enable ───────────────────────────┘   │    │ │││││
+Threshold #1 Value ────────────────────────────────────┘    │ │││││
+Reserved ───────────────────────────────────────────────────┘ │││││
+Critical Temperature Enable ──────────────────────────────────┘││││
+FORCEPR# INT Enable ───────────────────────────────────────────┘│││
+PROCHOT# INT enable ────────────────────────────────────────────┘││
+Low-Temperature INT enable ──────────────────────────────────────┘│
+High-Temperature INT Enable ──────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x19C 88360800
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19CH] IA32_HWP_THERM_STATUS Register With HWP Feedback
+  Command to read: sudo rdmsr 0x19c -f 63:0
+Value of register is: 88360800
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000010001000001101100000100000000000
+  └───────────────┬───────────────┘│└─┬┘└─┬┘└──┬──┘││││││││││││││││
+              Reserved             │  │   │    │   ││││││││││││││││
+Reading Valid ─────────────────────┘  │   │    │   ││││││││││││││││
+Reading in Deg. Celcius ──────────────┘   │    │   ││││││││││││││││
+Reserved ─────────────────────────────────┘    │   ││││││││││││││││
+Digital Readout ───────────────────────────────┘   ││││││││││││││││ 54 C -> 129 F
+Cross-domain Limit Log ────────────────────────────┘│││││││││││││││
+Cross-domain Limit Status ──────────────────────────┘││││││││││││││
+Current Limit Log ───────────────────────────────────┘│││││││││││││
+Current Limit Status ─────────────────────────────────┘││││││││││││
+Power Limit Notification Log ──────────────────────────┘│││││││││││
+Power Limit Notification Status ────────────────────────┘││││││││││
+Thermal Threshold #2 Log ────────────────────────────────┘│││││││││
+Thermal Threshold #2 Status ──────────────────────────────┘││││││││
+Thermal Threshold #1 Log ──────────────────────────────────┘│││││││
+Thermal Threshold #1 Status ────────────────────────────────┘││││││
+Critical Temperature Log ────────────────────────────────────┘│││││
+Critical Temperature Status ──────────────────────────────────┘││││
+PROCHOT# or FORCEPR# Log ──────────────────────────────────────┘│││
+PROCHOT# or FORCEPR# Event ─────────────────────────────────────┘││
+Thermal Status Log ──────────────────────────────────────────────┘│
+Thermal Status ───────────────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x1A0 850089
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A0H] IA32_MISC_ENABLE
+  Command to read: sudo rdmsr 0x1a0 -f 63:0
+Value of register is: 00850089
+  64  60        50        40        30        20        10
+   43210987654321098765432109876543210987654321098765432109876543210
+ 0b10000000000000000000000000000000000000000100001010000000010001001
+   └────────────────┬───────────┘│││└┬─┘│││└┤│││││││└┤│└┤│└┤│└┬┘│└┤│
+               Reserved          │││ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Execute-Disable Bit Disable(R/W) ┘││ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Hard C4E Enable (R/W)  ───────────┘│ │  │││ ││││││││ ││ ││ ││ │ │ ││
+C4E Enable (R/W)  ─────────────────┘ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Reserved ────────────────────────────┘  │││ ││││││││ ││ ││ ││ │ │ ││
+ACNT2 Enable (R/W) ─────────────────────┘││ ││││││││ ││ ││ ││ │ │ ││
+C2E Enable (R/W) ────────────────────────┘│ ││││││││ ││ ││ ││ │ │ ││
+C1E Enable (R/W) ─────────────────────────┘ ││││││││ ││ ││ ││ │ │ ││
+Reserved ───────────────────────────────────┘│││││││ ││ ││ ││ │ │ ││
+Limit CPUID Maxval (R/W) ────────────────────┘││││││ ││ ││ ││ │ │ ││
+RORCEPR Input Enable (R/W) ───────────────────┘│││││ ││ ││ ││ │ │ ││
+SpeedStep Tech. Select Lock (R/W) ─────────────┘││││ ││ ││ ││ │ │ ││
+Reserved ───────────────────────────────────────┘│││ ││ ││ ││ │ │ ││
+Enable Monitor FSM (R/W) ────────────────────────┘││ ││ ││ ││ │ │ ││
+Bi-Dir PROCHOT# Enable (R0) ──────────────────────┘│ ││ ││ ││ │ │ ││
+SpeedStep Tech. Enable (R/W) ──────────────────────┘ ││ ││ ││ │ │ ││
+Reserved ────────────────────────────────────────────┘│ ││ ││ │ │ ││
+TM2 Enable (R/W) ─────────────────────────────────────┘ ││ ││ │ │ ││
+Reserved ───────────────────────────────────────────────┘│ ││ │ │ ││
+FERR# Multiplexing Enable (R/W) ─────────────────────────┘ ││ │ │ ││
+Reserved ──────────────────────────────────────────────────┘│ │ │ ││
+Performance Monitoring Available (R0) ──────────────────────┘ │ │ ││
+Reserved ─────────────────────────────────────────────────────┘ │ ││
+TM1 Enable (R/W) ───────────────────────────────────────────────┘ ││
+Reserved ─────────────────────────────────────────────────────────┘│
+Fast String Enable (R/W) ──────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x1A1 3775
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A1H] IA32_PACKAGE_THERM_MARGIN
+  Command to read: sudo rdmsr 0x1a1 -f 63:0
+Value of register is: 00003775
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b10000000000000000000000000000000000000000000000000011011101110101
+   └────────────────────────┬─────────────────────┘└──────┬───────┘
+                        Reserved                          │        
+THERM Marging  ───────────────────────────────────────────┘  0x3775 -> 14197
+
+
+./intel-reg-pp.out -a 0x1A2 640000
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A2H] IA32_TEMPERATURE_TARGET
+  Command to read: sudo rdmsr 0x1a2 -f 63:0
+Value of register is: 00640000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000011001000000000000000000
+   └────────────────────┬─────────────────┘└──────────┬───────────┘
+                    Reserved                          │            
+Temperature Target, min (deg C) ──────────────────────┘  0x0 -> 0
+
+
+./intel-reg-pp.out -a 0x1B1 88360800
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1B1H] IA32_PKG_THERM_STATUS/IA32_PACKAGE_THERM_STATUS
+  Command to read: sudo rdmsr 0x1B1 -f 63:0
+Value of register is: 88360800
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000010001000001101100000100000000000
+   └──────────────────┬────────────────────┘└──┬──┘└─┬┘││││││││││││
+                  Reserved                     │     │ ││││││││││││
+Pkg Digital Readout (RO) ──────────────────────┘     │ ││││││││││││
+Reserved ────────────────────────────────────────────┘ ││││││││││││
+Pkg Power Limitation log (R/WC0) ──────────────────────┘│││││││││││
+Pkg Power Limitation Status (RO) ───────────────────────┘││││││││││
+Pkg Thermal Threshold #1 log (R/WC0) ────────────────────┘│││││││││
+Pkg Thermal Threshold #2 Status (RO) ─────────────────────┘││││││││
+Pkg Thermal Threshold #1 log (R/WC0) ──────────────────────┘│││││││
+Pkg Thermal Threshold #1 Status (RO) ───────────────────────┘││││││
+Pkg Critical Temperature Status log (R/WC0) ─────────────────┘│││││
+Pkg Critical Temperature Status (RO) ─────────────────────────┘││││
+Pkg PROCHOT # log (R/WC0) ─────────────────────────────────────┘│││
+Pkg PROCHOT # event (RO) ───────────────────────────────────────┘││
+Pkg Thermal Status Log (R/W): ───────────────────────────────────┘│
+Pkg Thermal Status (RO): ─────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x611 61ba5629
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[611H] MSR_PKG_ENERGY_STATUS/MSR_RAPL_POWER_UNIT
+  Command to read: sudo rdmsr 0x611 -f 63:0
+Value of register is: 61ba5629
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b10000000000000000000000000000000001100001101110100101011000101001
+   └─────────────────────┬────────────────────┘└─┬┘└┬┘└─┬─┘└─┬┘└─┬┘
+                     Reserved                    │  │   │    │   │
+Time Units ──────────────────────────────────────┘  │   │    │   │
+Reserved ───────────────────────────────────────────┘   │    │   │
+Energy Status Units ────────────────────────────────────┘    │   │
+Energy Status Units ────────────────────────────────────┘    │   │
+Reserved ────────────────────────────────────────────────────┘   │
+Power Units ─────────────────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x613 4e
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[613H] MSR_PKG_STATUS/MSR_PKG_PERF_STATUS
+  Command to read: sudo rdmsr 0x613 -f 63:0
+Value of register is: 0000004e
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000000000001001110
+   └───────────────┬──────────────┘└────────────────┬─────────────┘
+                Reserved                            │              
+Accumulated Package Throttle Time  ─────────────────┘              
+
+
+./intel-reg-pp.out -a 0x690 1c200000
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[690H] MSR_CORE_PERF_LIMIT_REASONS
+  Command to read: sudo rdmsr 0x690 -f 63:0
+Value of register is: 1c200000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000011100001000000000000000000000
+   └───────────────┬───────────────┘││││││└─┬─┘│││││││││││└─┬─┘││││
+              Reserved              ││││││  │  │││││││││││  │  ││││
+Maximum Efficiency Frequency Log ───┘│││││  │  │││││││││││  │  ││││
+Turbo Transistion Attenuation Log ───┘││││  │  │││││││││││  │  ││││
+Electical Design Point Log ───────────┘│││  │  │││││││││││  │  ││││
+Max Turbo Limit Log ───────────────────┘││  │  │││││││││││  │  ││││
+VR Them Alert Log ──────────────────────┘│  │  │││││││││││  │  ││││
+Core Power Limiting Log ─────────────────┘  │  │││││││││││  │  ││││
+Reserved ───────────────────────────────────┘  │││││││││││  │  ││││
+Package-Level PL2 Power Limiting Log ──────────┘││││││││││  │  ││││
+Package-Level PL1 Power Limiting Log ───────────┘│││││││││  │  ││││
+Thermal Log ─────────────────────────────────────┘││││││││  │  ││││
+PROCHOT Log ──────────────────────────────────────┘│││││││  │  ││││
+Reserved ──────────────────────────────────────────┘││││││  │  ││││
+Maximum Efficiency Frequency Status (R0)────────────┘│││││  │  ││││
+Turbo Transition Attenuation Status (R0)─────────────┘││││  │  ││││
+Electrical Design Point Status (R0)───────────────────┘│││  │  ││││
+Max Turbo Limit Status (R0) ───────────────────────────┘││  │  ││││
+VR Therm Alert Status (R0)──────────────────────────────┘│  │  ││││
+Core Power Limiting Status (R0)──────────────────────────┘  │  ││││
+Reserved ───────────────────────────────────────────────────┘  ││││
+Package-Level PL2 Power Limiting Status (R0) ──────────────────┘│││
+Package-Level Power Limiting PL1 Status (R0)────────────────────┘││
+Thermal Status (R0) ─────────────────────────────────────────────┘│
+PROCHOT Status (R0) ──────────────────────────────────────────────┘
+
+###########################################################################
+CORE: 1
+
+
+./intel-reg-pp.out -a 0x199 1d00
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[199H] IA32_PERF_CTL
+  Command to read: sudo rdmsr 0x199 -f 63:0
+Value of register is: 00001d00
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000001110100000000
+   └───────────────┬─────────────┘│└──────┬───────┘└──────┬───────┘
+              Reserved            │       │               │        
+IDA Engage (R/W) 1:disengage IDA ─┘       │               │        
+Reserved ─────────────────────────────────┘               │        
+Target Performance State Value ───────────────────────────┘  0x1d00 -> 7424  
+
+
+./intel-reg-pp.out -a 0x19A 0
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19AH] IA32_CLOCK_MODULATION
+  Command to read: sudo rdmsr 0x19A -f 63:0
+Value of register is: 00000000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000000000000000000
+   └─────────────────────────────┬───────────────────────────┘│└┬┘│
+                             Reserved                         │ │ │
+On-Demand Clock Modulation Enable ────────────────────────────┘ │ │
+On-Demand Clock Modulation Duty Cycle ──────────────────────────┘ │
+Extended On-Demand Clock Modulation Duty Cycle ───────────────────┘
+
+
+./intel-reg-pp.out -a 0x19B 13
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19BH] IA32_THERM_INTERRUPT
+  Command to read: sudo rdmsr 0x19b -f 63:0
+Value of register is: 00000013
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b10000000000000000000000000000000000000000000000000000000000010011
+   └───────────────┬──────────────────────┘│└──┬──┘│└──┬──┘└┬┘│││││
+              Reserved                     │   │   │   │    │ │││││
+Threshold #2 INT Enable ───────────────────┘   │   │   │    │ │││││
+Threshold #2 Value ────────────────────────────┘   │   │    │ │││││
+Threshold #1 INT Enable ───────────────────────────┘   │    │ │││││
+Threshold #1 Value ────────────────────────────────────┘    │ │││││
+Reserved ───────────────────────────────────────────────────┘ │││││
+Critical Temperature Enable ──────────────────────────────────┘││││
+FORCEPR# INT Enable ───────────────────────────────────────────┘│││
+PROCHOT# INT enable ────────────────────────────────────────────┘││
+Low-Temperature INT enable ──────────────────────────────────────┘│
+High-Temperature INT Enable ──────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x19C 88350800
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19CH] IA32_HWP_THERM_STATUS Register With HWP Feedback
+  Command to read: sudo rdmsr 0x19c -f 63:0
+Value of register is: 88350800
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000010001000001101010000100000000000
+  └───────────────┬───────────────┘│└─┬┘└─┬┘└──┬──┘││││││││││││││││
+              Reserved             │  │   │    │   ││││││││││││││││
+Reading Valid ─────────────────────┘  │   │    │   ││││││││││││││││
+Reading in Deg. Celcius ──────────────┘   │    │   ││││││││││││││││
+Reserved ─────────────────────────────────┘    │   ││││││││││││││││
+Digital Readout ───────────────────────────────┘   ││││││││││││││││ 53 C -> 127 F
+Cross-domain Limit Log ────────────────────────────┘│││││││││││││││
+Cross-domain Limit Status ──────────────────────────┘││││││││││││││
+Current Limit Log ───────────────────────────────────┘│││││││││││││
+Current Limit Status ─────────────────────────────────┘││││││││││││
+Power Limit Notification Log ──────────────────────────┘│││││││││││
+Power Limit Notification Status ────────────────────────┘││││││││││
+Thermal Threshold #2 Log ────────────────────────────────┘│││││││││
+Thermal Threshold #2 Status ──────────────────────────────┘││││││││
+Thermal Threshold #1 Log ──────────────────────────────────┘│││││││
+Thermal Threshold #1 Status ────────────────────────────────┘││││││
+Critical Temperature Log ────────────────────────────────────┘│││││
+Critical Temperature Status ──────────────────────────────────┘││││
+PROCHOT# or FORCEPR# Log ──────────────────────────────────────┘│││
+PROCHOT# or FORCEPR# Event ─────────────────────────────────────┘││
+Thermal Status Log ──────────────────────────────────────────────┘│
+Thermal Status ───────────────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x1A0 850089
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A0H] IA32_MISC_ENABLE
+  Command to read: sudo rdmsr 0x1a0 -f 63:0
+Value of register is: 00850089
+  64  60        50        40        30        20        10
+   43210987654321098765432109876543210987654321098765432109876543210
+ 0b10000000000000000000000000000000000000000100001010000000010001001
+   └────────────────┬───────────┘│││└┬─┘│││└┤│││││││└┤│└┤│└┤│└┬┘│└┤│
+               Reserved          │││ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Execute-Disable Bit Disable(R/W) ┘││ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Hard C4E Enable (R/W)  ───────────┘│ │  │││ ││││││││ ││ ││ ││ │ │ ││
+C4E Enable (R/W)  ─────────────────┘ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Reserved ────────────────────────────┘  │││ ││││││││ ││ ││ ││ │ │ ││
+ACNT2 Enable (R/W) ─────────────────────┘││ ││││││││ ││ ││ ││ │ │ ││
+C2E Enable (R/W) ────────────────────────┘│ ││││││││ ││ ││ ││ │ │ ││
+C1E Enable (R/W) ─────────────────────────┘ ││││││││ ││ ││ ││ │ │ ││
+Reserved ───────────────────────────────────┘│││││││ ││ ││ ││ │ │ ││
+Limit CPUID Maxval (R/W) ────────────────────┘││││││ ││ ││ ││ │ │ ││
+RORCEPR Input Enable (R/W) ───────────────────┘│││││ ││ ││ ││ │ │ ││
+SpeedStep Tech. Select Lock (R/W) ─────────────┘││││ ││ ││ ││ │ │ ││
+Reserved ───────────────────────────────────────┘│││ ││ ││ ││ │ │ ││
+Enable Monitor FSM (R/W) ────────────────────────┘││ ││ ││ ││ │ │ ││
+Bi-Dir PROCHOT# Enable (R0) ──────────────────────┘│ ││ ││ ││ │ │ ││
+SpeedStep Tech. Enable (R/W) ──────────────────────┘ ││ ││ ││ │ │ ││
+Reserved ────────────────────────────────────────────┘│ ││ ││ │ │ ││
+TM2 Enable (R/W) ─────────────────────────────────────┘ ││ ││ │ │ ││
+Reserved ───────────────────────────────────────────────┘│ ││ │ │ ││
+FERR# Multiplexing Enable (R/W) ─────────────────────────┘ ││ │ │ ││
+Reserved ──────────────────────────────────────────────────┘│ │ │ ││
+Performance Monitoring Available (R0) ──────────────────────┘ │ │ ││
+Reserved ─────────────────────────────────────────────────────┘ │ ││
+TM1 Enable (R/W) ───────────────────────────────────────────────┘ ││
+Reserved ─────────────────────────────────────────────────────────┘│
+Fast String Enable (R/W) ──────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x1A1 36aa
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A1H] IA32_PACKAGE_THERM_MARGIN
+  Command to read: sudo rdmsr 0x1a1 -f 63:0
+Value of register is: 000036aa
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000011011010101010
+   └────────────────────────┬─────────────────────┘└──────┬───────┘
+                        Reserved                          │        
+THERM Marging  ───────────────────────────────────────────┘  0x36aa -> 13994
+
+
+./intel-reg-pp.out -a 0x1A2 640000
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A2H] IA32_TEMPERATURE_TARGET
+  Command to read: sudo rdmsr 0x1a2 -f 63:0
+Value of register is: 00640000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000011001000000000000000000
+   └────────────────────┬─────────────────┘└──────────┬───────────┘
+                    Reserved                          │            
+Temperature Target, min (deg C) ──────────────────────┘  0x0 -> 0
+
+
+./intel-reg-pp.out -a 0x1B1 88350800
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1B1H] IA32_PKG_THERM_STATUS/IA32_PACKAGE_THERM_STATUS
+  Command to read: sudo rdmsr 0x1B1 -f 63:0
+Value of register is: 88350800
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000010001000001101010000100000000000
+   └──────────────────┬────────────────────┘└──┬──┘└─┬┘││││││││││││
+                  Reserved                     │     │ ││││││││││││
+Pkg Digital Readout (RO) ──────────────────────┘     │ ││││││││││││
+Reserved ────────────────────────────────────────────┘ ││││││││││││
+Pkg Power Limitation log (R/WC0) ──────────────────────┘│││││││││││
+Pkg Power Limitation Status (RO) ───────────────────────┘││││││││││
+Pkg Thermal Threshold #1 log (R/WC0) ────────────────────┘│││││││││
+Pkg Thermal Threshold #2 Status (RO) ─────────────────────┘││││││││
+Pkg Thermal Threshold #1 log (R/WC0) ──────────────────────┘│││││││
+Pkg Thermal Threshold #1 Status (RO) ───────────────────────┘││││││
+Pkg Critical Temperature Status log (R/WC0) ─────────────────┘│││││
+Pkg Critical Temperature Status (RO) ─────────────────────────┘││││
+Pkg PROCHOT # log (R/WC0) ─────────────────────────────────────┘│││
+Pkg PROCHOT # event (RO) ───────────────────────────────────────┘││
+Pkg Thermal Status Log (R/W): ───────────────────────────────────┘│
+Pkg Thermal Status (RO): ─────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x611 61ba8e5e
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[611H] MSR_PKG_ENERGY_STATUS/MSR_RAPL_POWER_UNIT
+  Command to read: sudo rdmsr 0x611 -f 63:0
+Value of register is: 61ba8e5e
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000001100001101110101000111001011110
+   └─────────────────────┬────────────────────┘└─┬┘└┬┘└─┬─┘└─┬┘└─┬┘
+                     Reserved                    │  │   │    │   │
+Time Units ──────────────────────────────────────┘  │   │    │   │
+Reserved ───────────────────────────────────────────┘   │    │   │
+Energy Status Units ────────────────────────────────────┘    │   │
+Energy Status Units ────────────────────────────────────┘    │   │
+Reserved ────────────────────────────────────────────────────┘   │
+Power Units ─────────────────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x613 4e
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[613H] MSR_PKG_STATUS/MSR_PKG_PERF_STATUS
+  Command to read: sudo rdmsr 0x613 -f 63:0
+Value of register is: 0000004e
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000000000001001110
+   └───────────────┬──────────────┘└────────────────┬─────────────┘
+                Reserved                            │              
+Accumulated Package Throttle Time  ─────────────────┘              
+
+
+./intel-reg-pp.out -a 0x690 1c200000
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[690H] MSR_CORE_PERF_LIMIT_REASONS
+  Command to read: sudo rdmsr 0x690 -f 63:0
+Value of register is: 1c200000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000011100001000000000000000000000
+   └───────────────┬───────────────┘││││││└─┬─┘│││││││││││└─┬─┘││││
+              Reserved              ││││││  │  │││││││││││  │  ││││
+Maximum Efficiency Frequency Log ───┘│││││  │  │││││││││││  │  ││││
+Turbo Transistion Attenuation Log ───┘││││  │  │││││││││││  │  ││││
+Electical Design Point Log ───────────┘│││  │  │││││││││││  │  ││││
+Max Turbo Limit Log ───────────────────┘││  │  │││││││││││  │  ││││
+VR Them Alert Log ──────────────────────┘│  │  │││││││││││  │  ││││
+Core Power Limiting Log ─────────────────┘  │  │││││││││││  │  ││││
+Reserved ───────────────────────────────────┘  │││││││││││  │  ││││
+Package-Level PL2 Power Limiting Log ──────────┘││││││││││  │  ││││
+Package-Level PL1 Power Limiting Log ───────────┘│││││││││  │  ││││
+Thermal Log ─────────────────────────────────────┘││││││││  │  ││││
+PROCHOT Log ──────────────────────────────────────┘│││││││  │  ││││
+Reserved ──────────────────────────────────────────┘││││││  │  ││││
+Maximum Efficiency Frequency Status (R0)────────────┘│││││  │  ││││
+Turbo Transition Attenuation Status (R0)─────────────┘││││  │  ││││
+Electrical Design Point Status (R0)───────────────────┘│││  │  ││││
+Max Turbo Limit Status (R0) ───────────────────────────┘││  │  ││││
+VR Therm Alert Status (R0)──────────────────────────────┘│  │  ││││
+Core Power Limiting Status (R0)──────────────────────────┘  │  ││││
+Reserved ───────────────────────────────────────────────────┘  ││││
+Package-Level PL2 Power Limiting Status (R0) ──────────────────┘│││
+Package-Level Power Limiting PL1 Status (R0)────────────────────┘││
+Thermal Status (R0) ─────────────────────────────────────────────┘│
+PROCHOT Status (R0) ──────────────────────────────────────────────┘
+
+###########################################################################
+CORE: 2
+
+
+./intel-reg-pp.out -a 0x199 1d00
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[199H] IA32_PERF_CTL
+  Command to read: sudo rdmsr 0x199 -f 63:0
+Value of register is: 00001d00
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000001110100000000
+   └───────────────┬─────────────┘│└──────┬───────┘└──────┬───────┘
+              Reserved            │       │               │        
+IDA Engage (R/W) 1:disengage IDA ─┘       │               │        
+Reserved ─────────────────────────────────┘               │        
+Target Performance State Value ───────────────────────────┘  0x1d00 -> 7424  
+
+
+./intel-reg-pp.out -a 0x19A 0
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19AH] IA32_CLOCK_MODULATION
+  Command to read: sudo rdmsr 0x19A -f 63:0
+Value of register is: 00000000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000000000000000000
+   └─────────────────────────────┬───────────────────────────┘│└┬┘│
+                             Reserved                         │ │ │
+On-Demand Clock Modulation Enable ────────────────────────────┘ │ │
+On-Demand Clock Modulation Duty Cycle ──────────────────────────┘ │
+Extended On-Demand Clock Modulation Duty Cycle ───────────────────┘
+
+
+./intel-reg-pp.out -a 0x19B 13
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19BH] IA32_THERM_INTERRUPT
+  Command to read: sudo rdmsr 0x19b -f 63:0
+Value of register is: 00000013
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b10000000000000000000000000000000000000000000000000000000000010011
+   └───────────────┬──────────────────────┘│└──┬──┘│└──┬──┘└┬┘│││││
+              Reserved                     │   │   │   │    │ │││││
+Threshold #2 INT Enable ───────────────────┘   │   │   │    │ │││││
+Threshold #2 Value ────────────────────────────┘   │   │    │ │││││
+Threshold #1 INT Enable ───────────────────────────┘   │    │ │││││
+Threshold #1 Value ────────────────────────────────────┘    │ │││││
+Reserved ───────────────────────────────────────────────────┘ │││││
+Critical Temperature Enable ──────────────────────────────────┘││││
+FORCEPR# INT Enable ───────────────────────────────────────────┘│││
+PROCHOT# INT enable ────────────────────────────────────────────┘││
+Low-Temperature INT enable ──────────────────────────────────────┘│
+High-Temperature INT Enable ──────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x19C 88370800
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19CH] IA32_HWP_THERM_STATUS Register With HWP Feedback
+  Command to read: sudo rdmsr 0x19c -f 63:0
+Value of register is: 88370800
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000010001000001101110000100000000000
+  └───────────────┬───────────────┘│└─┬┘└─┬┘└──┬──┘││││││││││││││││
+              Reserved             │  │   │    │   ││││││││││││││││
+Reading Valid ─────────────────────┘  │   │    │   ││││││││││││││││
+Reading in Deg. Celcius ──────────────┘   │    │   ││││││││││││││││
+Reserved ─────────────────────────────────┘    │   ││││││││││││││││
+Digital Readout ───────────────────────────────┘   ││││││││││││││││ 55 C -> 131 F
+Cross-domain Limit Log ────────────────────────────┘│││││││││││││││
+Cross-domain Limit Status ──────────────────────────┘││││││││││││││
+Current Limit Log ───────────────────────────────────┘│││││││││││││
+Current Limit Status ─────────────────────────────────┘││││││││││││
+Power Limit Notification Log ──────────────────────────┘│││││││││││
+Power Limit Notification Status ────────────────────────┘││││││││││
+Thermal Threshold #2 Log ────────────────────────────────┘│││││││││
+Thermal Threshold #2 Status ──────────────────────────────┘││││││││
+Thermal Threshold #1 Log ──────────────────────────────────┘│││││││
+Thermal Threshold #1 Status ────────────────────────────────┘││││││
+Critical Temperature Log ────────────────────────────────────┘│││││
+Critical Temperature Status ──────────────────────────────────┘││││
+PROCHOT# or FORCEPR# Log ──────────────────────────────────────┘│││
+PROCHOT# or FORCEPR# Event ─────────────────────────────────────┘││
+Thermal Status Log ──────────────────────────────────────────────┘│
+Thermal Status ───────────────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x1A0 850089
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A0H] IA32_MISC_ENABLE
+  Command to read: sudo rdmsr 0x1a0 -f 63:0
+Value of register is: 00850089
+  64  60        50        40        30        20        10
+   43210987654321098765432109876543210987654321098765432109876543210
+ 0b10000000000000000000000000000000000000000100001010000000010001001
+   └────────────────┬───────────┘│││└┬─┘│││└┤│││││││└┤│└┤│└┤│└┬┘│└┤│
+               Reserved          │││ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Execute-Disable Bit Disable(R/W) ┘││ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Hard C4E Enable (R/W)  ───────────┘│ │  │││ ││││││││ ││ ││ ││ │ │ ││
+C4E Enable (R/W)  ─────────────────┘ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Reserved ────────────────────────────┘  │││ ││││││││ ││ ││ ││ │ │ ││
+ACNT2 Enable (R/W) ─────────────────────┘││ ││││││││ ││ ││ ││ │ │ ││
+C2E Enable (R/W) ────────────────────────┘│ ││││││││ ││ ││ ││ │ │ ││
+C1E Enable (R/W) ─────────────────────────┘ ││││││││ ││ ││ ││ │ │ ││
+Reserved ───────────────────────────────────┘│││││││ ││ ││ ││ │ │ ││
+Limit CPUID Maxval (R/W) ────────────────────┘││││││ ││ ││ ││ │ │ ││
+RORCEPR Input Enable (R/W) ───────────────────┘│││││ ││ ││ ││ │ │ ││
+SpeedStep Tech. Select Lock (R/W) ─────────────┘││││ ││ ││ ││ │ │ ││
+Reserved ───────────────────────────────────────┘│││ ││ ││ ││ │ │ ││
+Enable Monitor FSM (R/W) ────────────────────────┘││ ││ ││ ││ │ │ ││
+Bi-Dir PROCHOT# Enable (R0) ──────────────────────┘│ ││ ││ ││ │ │ ││
+SpeedStep Tech. Enable (R/W) ──────────────────────┘ ││ ││ ││ │ │ ││
+Reserved ────────────────────────────────────────────┘│ ││ ││ │ │ ││
+TM2 Enable (R/W) ─────────────────────────────────────┘ ││ ││ │ │ ││
+Reserved ───────────────────────────────────────────────┘│ ││ │ │ ││
+FERR# Multiplexing Enable (R/W) ─────────────────────────┘ ││ │ │ ││
+Reserved ──────────────────────────────────────────────────┘│ │ │ ││
+Performance Monitoring Available (R0) ──────────────────────┘ │ │ ││
+Reserved ─────────────────────────────────────────────────────┘ │ ││
+TM1 Enable (R/W) ───────────────────────────────────────────────┘ ││
+Reserved ─────────────────────────────────────────────────────────┘│
+Fast String Enable (R/W) ──────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x1A1 35f8
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A1H] IA32_PACKAGE_THERM_MARGIN
+  Command to read: sudo rdmsr 0x1a1 -f 63:0
+Value of register is: 000035f8
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000011010111111000
+   └────────────────────────┬─────────────────────┘└──────┬───────┘
+                        Reserved                          │        
+THERM Marging  ───────────────────────────────────────────┘  0x35f8 -> 13816
+
+
+./intel-reg-pp.out -a 0x1A2 640000
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A2H] IA32_TEMPERATURE_TARGET
+  Command to read: sudo rdmsr 0x1a2 -f 63:0
+Value of register is: 00640000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000011001000000000000000000
+   └────────────────────┬─────────────────┘└──────────┬───────────┘
+                    Reserved                          │            
+Temperature Target, min (deg C) ──────────────────────┘  0x0 -> 0
+
+
+./intel-reg-pp.out -a 0x1B1 88340800
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1B1H] IA32_PKG_THERM_STATUS/IA32_PACKAGE_THERM_STATUS
+  Command to read: sudo rdmsr 0x1B1 -f 63:0
+Value of register is: 88340800
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000010001000001101000000100000000000
+   └──────────────────┬────────────────────┘└──┬──┘└─┬┘││││││││││││
+                  Reserved                     │     │ ││││││││││││
+Pkg Digital Readout (RO) ──────────────────────┘     │ ││││││││││││
+Reserved ────────────────────────────────────────────┘ ││││││││││││
+Pkg Power Limitation log (R/WC0) ──────────────────────┘│││││││││││
+Pkg Power Limitation Status (RO) ───────────────────────┘││││││││││
+Pkg Thermal Threshold #1 log (R/WC0) ────────────────────┘│││││││││
+Pkg Thermal Threshold #2 Status (RO) ─────────────────────┘││││││││
+Pkg Thermal Threshold #1 log (R/WC0) ──────────────────────┘│││││││
+Pkg Thermal Threshold #1 Status (RO) ───────────────────────┘││││││
+Pkg Critical Temperature Status log (R/WC0) ─────────────────┘│││││
+Pkg Critical Temperature Status (RO) ─────────────────────────┘││││
+Pkg PROCHOT # log (R/WC0) ─────────────────────────────────────┘│││
+Pkg PROCHOT # event (RO) ───────────────────────────────────────┘││
+Pkg Thermal Status Log (R/W): ───────────────────────────────────┘│
+Pkg Thermal Status (RO): ─────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x611 61bac61e
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[611H] MSR_PKG_ENERGY_STATUS/MSR_RAPL_POWER_UNIT
+  Command to read: sudo rdmsr 0x611 -f 63:0
+Value of register is: 61bac61e
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000001100001101110101100011000011110
+   └─────────────────────┬────────────────────┘└─┬┘└┬┘└─┬─┘└─┬┘└─┬┘
+                     Reserved                    │  │   │    │   │
+Time Units ──────────────────────────────────────┘  │   │    │   │
+Reserved ───────────────────────────────────────────┘   │    │   │
+Energy Status Units ────────────────────────────────────┘    │   │
+Energy Status Units ────────────────────────────────────┘    │   │
+Reserved ────────────────────────────────────────────────────┘   │
+Power Units ─────────────────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x613 4e
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[613H] MSR_PKG_STATUS/MSR_PKG_PERF_STATUS
+  Command to read: sudo rdmsr 0x613 -f 63:0
+Value of register is: 0000004e
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000000000001001110
+   └───────────────┬──────────────┘└────────────────┬─────────────┘
+                Reserved                            │              
+Accumulated Package Throttle Time  ─────────────────┘              
+
+
+./intel-reg-pp.out -a 0x690 1c201000
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[690H] MSR_CORE_PERF_LIMIT_REASONS
+  Command to read: sudo rdmsr 0x690 -f 63:0
+Value of register is: 1c201000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000011100001000000001000000000000
+   └───────────────┬───────────────┘││││││└─┬─┘│││││││││││└─┬─┘││││
+              Reserved              ││││││  │  │││││││││││  │  ││││
+Maximum Efficiency Frequency Log ───┘│││││  │  │││││││││││  │  ││││
+Turbo Transistion Attenuation Log ───┘││││  │  │││││││││││  │  ││││
+Electical Design Point Log ───────────┘│││  │  │││││││││││  │  ││││
+Max Turbo Limit Log ───────────────────┘││  │  │││││││││││  │  ││││
+VR Them Alert Log ──────────────────────┘│  │  │││││││││││  │  ││││
+Core Power Limiting Log ─────────────────┘  │  │││││││││││  │  ││││
+Reserved ───────────────────────────────────┘  │││││││││││  │  ││││
+Package-Level PL2 Power Limiting Log ──────────┘││││││││││  │  ││││
+Package-Level PL1 Power Limiting Log ───────────┘│││││││││  │  ││││
+Thermal Log ─────────────────────────────────────┘││││││││  │  ││││
+PROCHOT Log ──────────────────────────────────────┘│││││││  │  ││││
+Reserved ──────────────────────────────────────────┘││││││  │  ││││
+Maximum Efficiency Frequency Status (R0)────────────┘│││││  │  ││││
+Turbo Transition Attenuation Status (R0)─────────────┘││││  │  ││││
+Electrical Design Point Status (R0)───────────────────┘│││  │  ││││
+Max Turbo Limit Status (R0) ───────────────────────────┘││  │  ││││
+VR Therm Alert Status (R0)──────────────────────────────┘│  │  ││││
+Core Power Limiting Status (R0)──────────────────────────┘  │  ││││
+Reserved ───────────────────────────────────────────────────┘  ││││
+Package-Level PL2 Power Limiting Status (R0) ──────────────────┘│││
+Package-Level Power Limiting PL1 Status (R0)────────────────────┘││
+Thermal Status (R0) ─────────────────────────────────────────────┘│
+PROCHOT Status (R0) ──────────────────────────────────────────────┘
+
+###########################################################################
+CORE: 3
+
+
+./intel-reg-pp.out -a 0x199 1d00
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[199H] IA32_PERF_CTL
+  Command to read: sudo rdmsr 0x199 -f 63:0
+Value of register is: 00001d00
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000001110100000000
+   └───────────────┬─────────────┘│└──────┬───────┘└──────┬───────┘
+              Reserved            │       │               │        
+IDA Engage (R/W) 1:disengage IDA ─┘       │               │        
+Reserved ─────────────────────────────────┘               │        
+Target Performance State Value ───────────────────────────┘  0x1d00 -> 7424  
+
+
+./intel-reg-pp.out -a 0x19A 0
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19AH] IA32_CLOCK_MODULATION
+  Command to read: sudo rdmsr 0x19A -f 63:0
+Value of register is: 00000000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000000000000000000
+   └─────────────────────────────┬───────────────────────────┘│└┬┘│
+                             Reserved                         │ │ │
+On-Demand Clock Modulation Enable ────────────────────────────┘ │ │
+On-Demand Clock Modulation Duty Cycle ──────────────────────────┘ │
+Extended On-Demand Clock Modulation Duty Cycle ───────────────────┘
+
+
+./intel-reg-pp.out -a 0x19B 13
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19BH] IA32_THERM_INTERRUPT
+  Command to read: sudo rdmsr 0x19b -f 63:0
+Value of register is: 00000013
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b10000000000000000000000000000000000000000000000000000000000010011
+   └───────────────┬──────────────────────┘│└──┬──┘│└──┬──┘└┬┘│││││
+              Reserved                     │   │   │   │    │ │││││
+Threshold #2 INT Enable ───────────────────┘   │   │   │    │ │││││
+Threshold #2 Value ────────────────────────────┘   │   │    │ │││││
+Threshold #1 INT Enable ───────────────────────────┘   │    │ │││││
+Threshold #1 Value ────────────────────────────────────┘    │ │││││
+Reserved ───────────────────────────────────────────────────┘ │││││
+Critical Temperature Enable ──────────────────────────────────┘││││
+FORCEPR# INT Enable ───────────────────────────────────────────┘│││
+PROCHOT# INT enable ────────────────────────────────────────────┘││
+Low-Temperature INT enable ──────────────────────────────────────┘│
+High-Temperature INT Enable ──────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x19C 88330800
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19CH] IA32_HWP_THERM_STATUS Register With HWP Feedback
+  Command to read: sudo rdmsr 0x19c -f 63:0
+Value of register is: 88330800
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000010001000001100110000100000000000
+  └───────────────┬───────────────┘│└─┬┘└─┬┘└──┬──┘││││││││││││││││
+              Reserved             │  │   │    │   ││││││││││││││││
+Reading Valid ─────────────────────┘  │   │    │   ││││││││││││││││
+Reading in Deg. Celcius ──────────────┘   │    │   ││││││││││││││││
+Reserved ─────────────────────────────────┘    │   ││││││││││││││││
+Digital Readout ───────────────────────────────┘   ││││││││││││││││ 51 C -> 123 F
+Cross-domain Limit Log ────────────────────────────┘│││││││││││││││
+Cross-domain Limit Status ──────────────────────────┘││││││││││││││
+Current Limit Log ───────────────────────────────────┘│││││││││││││
+Current Limit Status ─────────────────────────────────┘││││││││││││
+Power Limit Notification Log ──────────────────────────┘│││││││││││
+Power Limit Notification Status ────────────────────────┘││││││││││
+Thermal Threshold #2 Log ────────────────────────────────┘│││││││││
+Thermal Threshold #2 Status ──────────────────────────────┘││││││││
+Thermal Threshold #1 Log ──────────────────────────────────┘│││││││
+Thermal Threshold #1 Status ────────────────────────────────┘││││││
+Critical Temperature Log ────────────────────────────────────┘│││││
+Critical Temperature Status ──────────────────────────────────┘││││
+PROCHOT# or FORCEPR# Log ──────────────────────────────────────┘│││
+PROCHOT# or FORCEPR# Event ─────────────────────────────────────┘││
+Thermal Status Log ──────────────────────────────────────────────┘│
+Thermal Status ───────────────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x1A0 850089
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A0H] IA32_MISC_ENABLE
+  Command to read: sudo rdmsr 0x1a0 -f 63:0
+Value of register is: 00850089
+  64  60        50        40        30        20        10
+   43210987654321098765432109876543210987654321098765432109876543210
+ 0b10000000000000000000000000000000000000000100001010000000010001001
+   └────────────────┬───────────┘│││└┬─┘│││└┤│││││││└┤│└┤│└┤│└┬┘│└┤│
+               Reserved          │││ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Execute-Disable Bit Disable(R/W) ┘││ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Hard C4E Enable (R/W)  ───────────┘│ │  │││ ││││││││ ││ ││ ││ │ │ ││
+C4E Enable (R/W)  ─────────────────┘ │  │││ ││││││││ ││ ││ ││ │ │ ││
+Reserved ────────────────────────────┘  │││ ││││││││ ││ ││ ││ │ │ ││
+ACNT2 Enable (R/W) ─────────────────────┘││ ││││││││ ││ ││ ││ │ │ ││
+C2E Enable (R/W) ────────────────────────┘│ ││││││││ ││ ││ ││ │ │ ││
+C1E Enable (R/W) ─────────────────────────┘ ││││││││ ││ ││ ││ │ │ ││
+Reserved ───────────────────────────────────┘│││││││ ││ ││ ││ │ │ ││
+Limit CPUID Maxval (R/W) ────────────────────┘││││││ ││ ││ ││ │ │ ││
+RORCEPR Input Enable (R/W) ───────────────────┘│││││ ││ ││ ││ │ │ ││
+SpeedStep Tech. Select Lock (R/W) ─────────────┘││││ ││ ││ ││ │ │ ││
+Reserved ───────────────────────────────────────┘│││ ││ ││ ││ │ │ ││
+Enable Monitor FSM (R/W) ────────────────────────┘││ ││ ││ ││ │ │ ││
+Bi-Dir PROCHOT# Enable (R0) ──────────────────────┘│ ││ ││ ││ │ │ ││
+SpeedStep Tech. Enable (R/W) ──────────────────────┘ ││ ││ ││ │ │ ││
+Reserved ────────────────────────────────────────────┘│ ││ ││ │ │ ││
+TM2 Enable (R/W) ─────────────────────────────────────┘ ││ ││ │ │ ││
+Reserved ───────────────────────────────────────────────┘│ ││ │ │ ││
+FERR# Multiplexing Enable (R/W) ─────────────────────────┘ ││ │ │ ││
+Reserved ──────────────────────────────────────────────────┘│ │ │ ││
+Performance Monitoring Available (R0) ──────────────────────┘ │ │ ││
+Reserved ─────────────────────────────────────────────────────┘ │ ││
+TM1 Enable (R/W) ───────────────────────────────────────────────┘ ││
+Reserved ─────────────────────────────────────────────────────────┘│
+Fast String Enable (R/W) ──────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x1A1 34db
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A1H] IA32_PACKAGE_THERM_MARGIN
+  Command to read: sudo rdmsr 0x1a1 -f 63:0
+Value of register is: 000034db
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b10000000000000000000000000000000000000000000000000011010011011011
+   └────────────────────────┬─────────────────────┘└──────┬───────┘
+                        Reserved                          │        
+THERM Marging  ───────────────────────────────────────────┘  0x34db -> 13531
+
+
+./intel-reg-pp.out -a 0x1A2 640000
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1A2H] IA32_TEMPERATURE_TARGET
+  Command to read: sudo rdmsr 0x1a2 -f 63:0
+Value of register is: 00640000
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000011001000000000000000000
+   └────────────────────┬─────────────────┘└──────────┬───────────┘
+                    Reserved                          │            
+Temperature Target, min (deg C) ──────────────────────┘  0x0 -> 0
+
+
+./intel-reg-pp.out -a 0x1B1 88340800
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[1B1H] IA32_PKG_THERM_STATUS/IA32_PACKAGE_THERM_STATUS
+  Command to read: sudo rdmsr 0x1B1 -f 63:0
+Value of register is: 88340800
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000010001000001101000000100000000000
+   └──────────────────┬────────────────────┘└──┬──┘└─┬┘││││││││││││
+                  Reserved                     │     │ ││││││││││││
+Pkg Digital Readout (RO) ──────────────────────┘     │ ││││││││││││
+Reserved ────────────────────────────────────────────┘ ││││││││││││
+Pkg Power Limitation log (R/WC0) ──────────────────────┘│││││││││││
+Pkg Power Limitation Status (RO) ───────────────────────┘││││││││││
+Pkg Thermal Threshold #1 log (R/WC0) ────────────────────┘│││││││││
+Pkg Thermal Threshold #2 Status (RO) ─────────────────────┘││││││││
+Pkg Thermal Threshold #1 log (R/WC0) ──────────────────────┘│││││││
+Pkg Thermal Threshold #1 Status (RO) ───────────────────────┘││││││
+Pkg Critical Temperature Status log (R/WC0) ─────────────────┘│││││
+Pkg Critical Temperature Status (RO) ─────────────────────────┘││││
+Pkg PROCHOT # log (R/WC0) ─────────────────────────────────────┘│││
+Pkg PROCHOT # event (RO) ───────────────────────────────────────┘││
+Pkg Thermal Status Log (R/W): ───────────────────────────────────┘│
+Pkg Thermal Status (RO): ─────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x611 61bb1368
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[611H] MSR_PKG_ENERGY_STATUS/MSR_RAPL_POWER_UNIT
+  Command to read: sudo rdmsr 0x611 -f 63:0
+Value of register is: 61bb1368
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000001100001101110110001001101101000
+   └─────────────────────┬────────────────────┘└─┬┘└┬┘└─┬─┘└─┬┘└─┬┘
+                     Reserved                    │  │   │    │   │
+Time Units ──────────────────────────────────────┘  │   │    │   │
+Reserved ───────────────────────────────────────────┘   │    │   │
+Energy Status Units ────────────────────────────────────┘    │   │
+Energy Status Units ────────────────────────────────────┘    │   │
+Reserved ────────────────────────────────────────────────────┘   │
+Power Units ─────────────────────────────────────────────────────┘
+
+
+./intel-reg-pp.out -a 0x613 4e
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[613H] MSR_PKG_STATUS/MSR_PKG_PERF_STATUS
+  Command to read: sudo rdmsr 0x613 -f 63:0
+Value of register is: 0000004e
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000000000000000000000000001001110
+   └───────────────┬──────────────┘└────────────────┬─────────────┘
+                Reserved                            │              
+Accumulated Package Throttle Time  ─────────────────┘              
+
+
+./intel-reg-pp.out -a 0x690 1c200020
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[690H] MSR_CORE_PERF_LIMIT_REASONS
+  Command to read: sudo rdmsr 0x690 -f 63:0
+Value of register is: 1c200020
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000000000011100001000000000000000100000
+   └───────────────┬───────────────┘││││││└─┬─┘│││││││││││└─┬─┘││││
+              Reserved              ││││││  │  │││││││││││  │  ││││
+Maximum Efficiency Frequency Log ───┘│││││  │  │││││││││││  │  ││││
+Turbo Transistion Attenuation Log ───┘││││  │  │││││││││││  │  ││││
+Electical Design Point Log ───────────┘│││  │  │││││││││││  │  ││││
+Max Turbo Limit Log ───────────────────┘││  │  │││││││││││  │  ││││
+VR Them Alert Log ──────────────────────┘│  │  │││││││││││  │  ││││
+Core Power Limiting Log ─────────────────┘  │  │││││││││││  │  ││││
+Reserved ───────────────────────────────────┘  │││││││││││  │  ││││
+Package-Level PL2 Power Limiting Log ──────────┘││││││││││  │  ││││
+Package-Level PL1 Power Limiting Log ───────────┘│││││││││  │  ││││
+Thermal Log ─────────────────────────────────────┘││││││││  │  ││││
+PROCHOT Log ──────────────────────────────────────┘│││││││  │  ││││
+Reserved ──────────────────────────────────────────┘││││││  │  ││││
+Maximum Efficiency Frequency Status (R0)────────────┘│││││  │  ││││
+Turbo Transition Attenuation Status (R0)─────────────┘││││  │  ││││
+Electrical Design Point Status (R0)───────────────────┘│││  │  ││││
+Max Turbo Limit Status (R0) ───────────────────────────┘││  │  ││││
+VR Therm Alert Status (R0)──────────────────────────────┘│  │  ││││
+Core Power Limiting Status (R0)──────────────────────────┘  │  ││││
+Reserved ───────────────────────────────────────────────────┘  ││││
+Package-Level PL2 Power Limiting Status (R0) ──────────────────┘│││
+Package-Level Power Limiting PL1 Status (R0)────────────────────┘││
+Thermal Status (R0) ─────────────────────────────────────────────┘│
+PROCHOT Status (R0) ──────────────────────────────────────────────┘
+
+root@ubuntu-233:~# 

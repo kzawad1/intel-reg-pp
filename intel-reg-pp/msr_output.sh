@@ -63,10 +63,11 @@ function MSR_OUTPUT__main()
   echo "MSR Dump, Script Version 1.0"
   
   MSR_OUTPUT__displayAsTable
+  MSR_OUTPUT__displayAsPrettyPrint
 }
 
 ###############################################################################
-# Main
+# Sub-Function
 # Globals:
 #   None
 # Arguments:
@@ -78,7 +79,6 @@ function MSR_OUTPUT__displayAsTable()
 {
   local l_var_core_count
   local l_var_reg_val
-  local l_var_reg_val_s
   local l_var_arr_len
   declare -a l_var_arr_cmd
   local l_var_num
@@ -128,7 +128,7 @@ function MSR_OUTPUT__displayAsTable()
   do
     printf "  [% 2s] %s\n" "${l_var_num_mod}" "${i}"
 
-    l_var_modulo=$(( $l_var_num % 4 ))
+    l_var_modulo=$(( l_var_num % 4 ))
     if [[ $l_var_modulo == "0" ]]
     then
       ((l_var_num_mod++))
@@ -136,6 +136,55 @@ function MSR_OUTPUT__displayAsTable()
 
     ((l_var_num++))
   done
+}
+
+###############################################################################
+# Sub-Function
+# Globals:
+#   None
+# Arguments:
+#   None
+# Returns:
+#   None
+###############################################################################
+function MSR_OUTPUT__displayAsPrettyPrint()
+{
+  local l_var_core_count
+  local l_var_arr_len
+  local l_var_reg_val
+
+  echo ""
+
+  # Determine how many cores there are
+  l_var_core_count=$(grep -Pc '^processor\t' /proc/cpuinfo)
+
+  for (( core=0; core < l_var_core_count; core++))
+  do
+    echo ""
+    printf "###########################################################################\n"
+    printf "CORE: %s\n" "${core}"
+    
+    l_var_arr_len=${#g_arr_MsrName[@]}
+    for (( index=0; index < l_var_arr_len; index++))
+    do
+      # X
+      l_var_reg_val=$(sudo rdmsr -p ${core} "${g_arr_MsrAddr[index]}" -f 63:0 2>&1)
+      if [[ $l_var_reg_val =~ "rdmsr" ]]
+      then
+        l_var_reg_val="N/A"
+      fi
+
+      if [[ "${l_var_reg_val}" != "N/A" ]]
+      then
+        echo ""
+        echo ""
+        echo "./intel-reg-pp.out -a ${g_arr_MsrAddr[index]} ${l_var_reg_val}"
+        ./intel-reg-pp.out -a "${g_arr_MsrAddr[index]}" "${l_var_reg_val}"
+      fi
+    done
+  done
+  
+  echo ""
 }
 
 MSR_OUTPUT__main "$@"
