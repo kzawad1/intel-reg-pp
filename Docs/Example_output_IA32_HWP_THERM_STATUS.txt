@@ -1,0 +1,33 @@
+root@ubuntu-233:~# ./intel-reg-pp.out -n IA32_HWP_THERM_STATUS 884100800
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+[19CH] IA32_HWP_THERM_STATUS Register With HWP Feedback
+  Command to read: sudo rdmsr 0x19c -f 63:0
+Value of register is: 884100800
+  64  60        50        40        30        20        10
+  43210987654321098765432109876543210987654321098765432109876543210
+0b00000000000000000000000000000100010000100000100000000100000000000
+  └───────────────┬───────────────┘│└─┬┘└─┬┘└──┬──┘││││││││││││││││
+              Reserved             │  │   │    │   ││││││││││││││││
+Reading Valid ─────────────────────┘  │   │    │   ││││││││││││││││
+Reading in Deg. Celcius ──────────────┘   │    │   ││││││││││││││││
+Reserved ─────────────────────────────────┘    │   ││││││││││││││││
+Digital Readout ───────────────────────────────┘   ││││││││││││││││ 16 C -> 60 F
+Cross-domain Limit Log ────────────────────────────┘│││││││││││││││
+Cross-domain Limit Status ──────────────────────────┘││││││││││││││
+Current Limit Log ───────────────────────────────────┘│││││││││││││
+Current Limit Status ─────────────────────────────────┘││││││││││││
+Power Limit Notification Log ──────────────────────────┘│││││││││││
+Power Limit Notification Status ────────────────────────┘││││││││││
+Thermal Threshold #2 Log ────────────────────────────────┘│││││││││
+Thermal Threshold #2 Status ──────────────────────────────┘││││││││
+Thermal Threshold #1 Log ──────────────────────────────────┘│││││││
+Thermal Threshold #1 Status ────────────────────────────────┘││││││
+Critical Temperature Log ────────────────────────────────────┘│││││
+Critical Temperature Status ──────────────────────────────────┘││││
+PROCHOT# or FORCEPR# Log ──────────────────────────────────────┘│││
+PROCHOT# or FORCEPR# Event ─────────────────────────────────────┘││
+Thermal Status Log ──────────────────────────────────────────────┘│
+Thermal Status ───────────────────────────────────────────────────┘
+root@ubuntu-233:~# 
