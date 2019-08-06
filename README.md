@@ -115,6 +115,37 @@ root@ubuntu-233:~#
 And the corresponding screenshot is:
 ![Example_output_IA32_HWP_THERM_STATUS](./Docs/Example_output_IA32_HWP_THERM_STATUS.png)
 
+Lastly, the reading of the registers can be automated for each core as shown with script (in the same directory as source code) below:
+```
+root@ubuntu-233:~# ./msr_output.sh 
+MSR Dump, Script Version 1.0
++----+------------------------------+---------+----------+----------+----------+----------+
+|  # | MSR Register                 | Address |   Core 0 |   Core 1 |   Core 2 |   Core 3 |
++----+------------------------------+---------+----------+----------+----------+----------+
+|  0 | IA32_PERF_CTL                |   0x199 |     1d00 |     1d00 |     1d00 |     1d00 |
+|  1 | IA32_CLOCK_MODULATION        |   0x19A |        0 |        0 |        0 |        0 |
+|  2 | IS32_THERM_INTERRUPT         |   0x19B |       13 |       13 |       13 |       13 |
+|  3 | IA32_HWP_THERM_STATUS        |   0x19C | 883a0800 | 88380800 | 883b0800 | 88390800 |
+|  4 | IA32_MISC_ENABLE             |   0x1A0 |   850089 |   850089 |   850089 |   850089 |
+|  5 | IA32_PACKAGE_THERM_MARGIN    |   0x1A1 |     3afc |     3af0 |     3ae4 |     3ad2 |
+|  6 | IA32_TEMPERATURE_TARGET      |   0x1A2 |   640000 |   640000 |   640000 |   640000 |
+|  7 | IA32_PKG_THERM_STATUS        |   0x1B1 | 88380800 | 88380800 | 88380800 | 88380800 |
+|  8 | MSR_PKG_ENERGY_STATUS        |   0x611 | 61b9b602 | 61b9b874 | 61b9bbbb | 61b9be6d |
+|  9 | MSR_PKG_STATUS               |   0x613 |       4e |       4e |       4e |       4e |
+| 10 | MSR_PPERF                    |   0x64E |      N/A |      N/A |      N/A |      N/A |
+| 11 | MSR_CORE_PERF_LIMIT_REASONS  |   0x690 | 1c200020 | 1c200000 | 1c201000 | 1c201000 |
+| 12 | IA32_PM_ENABLE               |   0x770 |      N/A |      N/A |      N/A |      N/A |
+| 13 | IA32_HWP_CAPABILITIES        |   0x771 |      N/A |      N/A |      N/A |      N/A |
+| 14 | IA32_HWP_REQUEST_PKG         |   0x772 |      N/A |      N/A |      N/A |      N/A |
+| 15 | IA32_HWP_INTERRUPT           |   0x773 |      N/A |      N/A |      N/A |      N/A |
+| 16 | IA32_HWP_REQUEST             |   0x774 |      N/A |      N/A |      N/A |      N/A |
+| 17 | IA32_HWP_PECI_REQUEST_INFO   |   0x775 |      N/A |      N/A |      N/A |      N/A |
+| 18 | IA32_HWP_STATUS              |   0x777 |      N/A |      N/A |      N/A |      N/A |
++----+------------------------------+---------+----------+----------+----------+----------+
+Generated table by executing commands:
+  [ 0] sudo rdmsr -p 0 0x199 -f 63:0 2>&1
+...
+```
 
 # Further work
 Need to determine how to get the values of the following registers:
