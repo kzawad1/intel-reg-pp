@@ -117,4 +117,11 @@ And the corresponding screenshot is:
 
 
 # Further work
-TO DO: Add content here.
+Need to determine how to get the values of the following registers:
+
+| MSR Register Name | MSR Register Address | Output |
+|-------------------|----------------------|---|
+| MSR_PPERF         | 0x64E                | rdmsr: CPU 0 cannot read MSR 0x0000064E |
+| z                 | z                    | z |
+| z                 | z                    | z |
+
