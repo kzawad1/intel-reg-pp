@@ -34,4 +34,46 @@ user1@ubuntu:~$ sudo rdmsr 0x19C -f 63:0
 
 
 # Example(s)
-TO DO: Add Content Here
+The tool is quite simple.  To view the usage, simply place the binary on the system one wishes to execute and call it by name as shown below:
+```
+root@ubuntu-233:~# ./intel-reg-pp.out 
+
+Intel Register Pretty Print (intel-reg-pp) v1.0.0
+
+
+Usage: intel-reg-pp -a address_hex value_hex_string
+Usage: intel-reg-pp -n name_string value_hex_string
+ -a Register address in hexidecimal
+ -n Register name as string, currently supported:
+    199H IA32_PERF_CTL
+    19aH IA32_CLOCK_MODULATION
+    19bH IA32_THERM_INTERRUPT
+    19cH IA32_HWP_THERM_STATUS
+    1a0H IA32_MISC_ENABLE
+    1a1H IA32_PACKAGE_THERM_MARGIN
+    1a2H IA32_TEMPERATURE_TARGET
+    1b1H IA32_PKG_THERM_STATUS
+    611H MSR_PKG_ENERGY_STATUS
+    613H MSR_PKG_STATUS
+    64eH MSR_PPERF
+    690H MSR_CORE_PERF_LIMIT_REASONS
+    770H IA32_PM_ENABLE
+    771H IA32_HWP_CAPABILITIES
+    772H IA32_HWP_REQUEST_PKG
+    773H IA32_HWP_INTERRUPT
+    774H IA32_HWP_REQUEST
+    775H IA32_HWP_PECI_REQUEST_INFO
+    777H IA32_HWP_STATUS
+
+intel-reg-pp -n MSR_CORE_PERF_LIMIT_REASONS 0x1c220002
+intel-reg-pp -a 0x64F 0x1c220002
+intel-reg-pp -a 64FH 0x1c220002
+
+Unknow Register ID!
+root@ubuntu-233:~# 
+```
+
+The output of this will indicate how to use it and what is supported as shown in the screenshot below.  
+![APP_USAGE](./Docs/Example_intel-reg-pp_usage.png)
+
+
