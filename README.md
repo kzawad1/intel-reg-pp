@@ -23,6 +23,7 @@ sudo modprobe msr
 Last, read a Intel Model Specific register (MSR) using the following command:
 ```
 sudo rdmsr 0x19C -f 63:0
+sudo strace rdmsr 0x19C -f 63:0
 ```
 
 Take the hexidecimal output from the command and pass it to the **intel-reg-pp** application.
