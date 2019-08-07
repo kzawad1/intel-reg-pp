@@ -6,7 +6,7 @@ This tool was created while working on a Thermal Throttling problem associated w
 A link to the problem description is the following:
 https://software.intel.com/en-us/forums/software-tuning-performance-optimization-platform-monitoring/topic/815194
 
-# Prerequiste
+# Prerequisite
 This tool is used in conjunction with Linux **msr-tools** because this tool allows one to read the Intel processor specific registers.  This tool was built using Visual Studio for Linux and tested on a Ubuntu 18.04.1 LTS x64 machine.
 
 To install **msr-tools** run the following commands:
