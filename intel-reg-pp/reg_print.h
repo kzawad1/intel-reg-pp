@@ -7,7 +7,7 @@ extern "C" {
 /* Definition(s) for Intel MSR register strings */
 #define REG_PRINT__STRING_IA32_PERF_CTL                 (char *)"IA32_PERF_CTL"
 #define REG_PRINT__STRING_IA32_CLOCK_MODULATION         (char *)"IA32_CLOCK_MODULATION"
-#define REG_PRINT__STRING_IS32_THERM_INTERRUPT          (char *)"IS32_THERM_INTERRUPT"
+#define REG_PRINT__STRING_IA32_THERM_INTERRUPT          (char *)"IA32_THERM_INTERRUPT"
 #define REG_PRINT__STRING_IA32_HWP_THERM_STATUS         (char *)"IA32_HWP_THERM_STATUS"
 #define REG_PRINT__STRING_IA32_MISC_ENABLE              (char *)"IA32_MISC_ENABLE"
 #define REG_PRINT__STRING_IA32_PACKAGE_THERM_MARGIN     (char *)"IA32_PACKAGE_THERM_MARGIN"
@@ -28,7 +28,7 @@ extern "C" {
 /* Definition(s) for Intel MSR register address */
 #define REG_PRINT__ADDR_IA32_PERF_CTL               0x199
 #define REG_PRINT__ADDR_IA32_CLOCK_MODULATION       0x19A
-#define REG_PRINT__ADDR_IS32_THERM_INTERRUPT        0x19B
+#define REG_PRINT__ADDR_IA32_THERM_INTERRUPT        0x19B
 #define REG_PRINT__ADDR_IA32_HWP_THERM_STATUS       0x19C
 #define REG_PRINT__ADDR_IA32_MISC_ENABLE            0x1A0
 #define REG_PRINT__ADDR_IA32_PACKAGE_THERM_MARGIN   0x1A1

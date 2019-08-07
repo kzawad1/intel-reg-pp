@@ -88,6 +88,9 @@
     <ClInclude Include="reg_print_args.h" />
     <ClInclude Include="reg_print_de.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="msr_output.sh" />
+  </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

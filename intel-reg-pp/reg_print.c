@@ -8,7 +8,7 @@ static stREG_PRINT__DEF G_pstXlat[] =
 {
     {REG_PRINT__STRING_IA32_PERF_CTL              , REG_PRINT__ID_IA32_PERF_CTL              , REG_PRINT__ADDR_IA32_PERF_CTL              , REG_PRINT_DE__printIA32PerfCtl            , 0}, // 0
     {REG_PRINT__STRING_IA32_CLOCK_MODULATION      , REG_PRINT__ID_IA32_CLOCK_MODULATION      , REG_PRINT__ADDR_IA32_CLOCK_MODULATION      , REG_PRINT_DE__print_IA32_CLOCK_MODULATION , 0}, // 1
-    {REG_PRINT__STRING_IS32_THERM_INTERRUPT       , REG_PRINT__ID_IA32_THERM_INTERRUPT       , REG_PRINT__ADDR_IS32_THERM_INTERRUPT       , REG_PRINT_DE__printIA32ThermInterrupt     , 0}, // 2
+    {REG_PRINT__STRING_IA32_THERM_INTERRUPT       , REG_PRINT__ID_IA32_THERM_INTERRUPT       , REG_PRINT__ADDR_IA32_THERM_INTERRUPT       , REG_PRINT_DE__printIA32ThermInterrupt     , 0}, // 2
     {REG_PRINT__STRING_IA32_HWP_THERM_STATUS      , REG_PRINT__ID_IA32_HWP_THERM_STATUS      , REG_PRINT__ADDR_IA32_HWP_THERM_STATUS      , REG_PRINT_DE__printThemStatus             , 0}, // 3
     {REG_PRINT__STRING_IA32_MISC_ENABLE           , REG_PRINT__ID_IA32_MISC_ENABLE           , REG_PRINT__ADDR_IA32_MISC_ENABLE           , REG_PRINT_DE__printIA32MiscEnable         , 0}, // 4
     {REG_PRINT__STRING_IA32_PACKAGE_THERM_MARGIN  , REG_PRINT__ID_IA32_PACKAGE_THERM_MARGIN  , REG_PRINT__ADDR_IA32_PACKAGE_THERM_MARGIN  , REG_PRINT_DE__printIA32PackageThermMargin , 0}, // 5
@@ -317,16 +317,16 @@ void REG_PRINT__DisplayDetails(stREG_PRINT__DEF* pstReg)
             }
             else
             {
-                printf("No function specified for register!");
+                printf("No function specified for register!\n");
             }
         }
         else
         {
-            printf("Unknow Register ID!");
+            printf("Unknow Register ID!\n");
         }
     }
     else
     {
-        printf("Program Error!");
+        printf("Program Error!\n");
     }
 }

@@ -8,7 +8,7 @@ void REG_PRINT_ARGS__DisplayHelp(void)
     printf("\n");
     printf("Usage: intel-reg-pp -a address_hex value_hex_string\n");
     printf("Usage: intel-reg-pp -n name_string value_hex_string\n");
-    printf(" -a Register addres in hexidecimal\n");
+    printf(" -a Register address in hexidecimal\n");
     printf(" -n Register name as string, currently supported:\n");
     REG_PRINT__DisplaySupported();
     printf("\n");
@@ -92,6 +92,6 @@ void REG_PRINT_ARGS__Parse(int argc, char * argv[], stREG_PRINT__DEF* pstReg)
     }
     else
     {
-        printf("Program Error, null pointer in Parse().");
+        printf("Program Error, null pointer in Parse().\n");
     }
 }
