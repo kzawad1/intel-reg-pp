@@ -161,3 +161,6 @@ Need to determine how to get the values of the following registers:
 | IA32_HWP_PECI_REQUEST_INFO | 0x775 | rdmsr: CPU 0 cannot read MSR 0x00000775 |
 | IA32_HWP_STATUS | 0x777 | rdmsr: CPU 0 cannot read MSR 0x00000777 |
 
+# Related
+Here is a link to a related post:
+https://software.intel.com/en-us/forums/software-tuning-performance-optimization-platform-monitoring/topic/815194
