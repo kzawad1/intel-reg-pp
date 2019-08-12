@@ -61,9 +61,45 @@ declare -a g_arr_MsrAddr=(\
 function MSR_OUTPUT__main()
 {
   echo "MSR Dump, Script Version 1.0"
-  
+
+  MSR_OUTPUT__getGeneralInfo
   MSR_OUTPUT__displayAsTable
   MSR_OUTPUT__displayAsPrettyPrint
+}
+
+###############################################################################
+# Sub-Function
+# Globals:
+#   None
+# Arguments:
+#   None
+# Returns:
+#   None
+###############################################################################
+function exe()
+{
+  echo "\$ $*" ; "$@" ;
+}
+
+###############################################################################
+# Sub-Function
+# Globals:
+#   None
+# Arguments:
+#   None
+# Returns:
+#   None
+###############################################################################
+function MSR_OUTPUT__getGeneralInfo()
+{
+  echo ""
+  exe eval 'date'
+  exe eval 'cat /proc/cpuinfo | grep "MHz"'
+  exe eval 'lsb_release -a'
+  exe eval "dmesg | grep 'MHz processor'"
+  exe eval 'cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
+  echo ""
+  echo ""
 }
 
 ###############################################################################
