@@ -328,7 +328,6 @@ void REG_PRINT_DE__print_MSR_PKG_ENERGY_STATUS(unsigned long long ullVal)
     printf("Time Units ──────────────────────────────────────┘  │   │    │   │\n");
     printf("Reserved ───────────────────────────────────────────┘   │    │   │\n");
     printf("Energy Status Units ────────────────────────────────────┘    │   │\n");
-    printf("Energy Status Units ────────────────────────────────────┘    │   │\n");
     printf("Reserved ────────────────────────────────────────────────────┘   │\n");
     printf("Power Units ─────────────────────────────────────────────────────┘\n");
 }
