@@ -255,7 +255,8 @@ void REG_PRINT_DE__printIA32TermperatureTarget(unsigned long long ullVal)
     // Create a binary string from value
     REG_PRINT_DE__makeBinaryString(ullVal, cBuffValAsBin, sizeof(cBuffValAsBin));
 
-    uiTargPerfStateVal = (unsigned int)((unsigned long long)0x7FFF & ullVal);
+    uiTargPerfStateVal = (unsigned int)((unsigned long long)0x0FF0000 & ullVal);
+    uiTargPerfStateVal = (uiTargPerfStateVal >> 16);
 
     printf("[1A2H] IA32_TEMPERATURE_TARGET\n");
     printf("  Command to read: sudo rdmsr 0x1a2 -f 63:0\n");
@@ -263,9 +264,10 @@ void REG_PRINT_DE__printIA32TermperatureTarget(unsigned long long ullVal)
     printf("  64  60        50        40        30        20        10\n");
     printf("  43210987654321098765432109876543210987654321098765432109876543210\n");
     printf("%s\n", cBuffValAsBin);
-    printf("   └────────────────────┬─────────────────┘└──────────┬───────────┘\n");
-    printf("                    Reserved                          │            \n");
-    printf("Temperature Target, min (deg C) ──────────────────────┘  0x%x -> %d\n", uiTargPerfStateVal, uiTargPerfStateVal);
+    printf("   └────────────────────┬─────────────────┘└───┬──┘└───────┬──────┘\n");
+    printf("Reserved ───────────────┘                      │           │       \n");
+    printf("Temperature Target, min (deg C) ───────────────┘           │ 0x%x -> %d C\n", uiTargPerfStateVal, uiTargPerfStateVal);
+    printf("Not defined ───────────────────────────────────────────────┘       \n");
 }
 
 //#############################################################################
